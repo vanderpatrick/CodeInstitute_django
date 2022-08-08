@@ -15,10 +15,12 @@
         <tr>
             {% if item.done %}
             <td> <strike> {{ item.name }} </strike>
+                <a href="/toggle/{{ item.id }}">Toggle</a>
                 <a href="/edit/{{ item.id }}">Edit</a>
             </td>
             {% else %}
             <td>{{ item.name }}
+                <a href="/toggle/{{ item.id }}">Toggle</a>
                 <a href="/edit/{{ item.id }}">Edit</a>
             </td>
             {% endif %}
